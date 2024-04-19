@@ -17,12 +17,13 @@ public class Currencies {
     public void userCurrInput() {
         Scanner input1 = new Scanner(System.in);
         System.out.println("Enter currency you're exchanging from (valid 3 char format)");
-        String firstCurr = input1.next();
+        String firstCurr = input1.next().toUpperCase();
         input1.close();
 
         Scanner input2 = new Scanner(System.in);
         System.out.println("Enter currency you're exchanging to (valid 3 char format)");
-        String secCurr = input2.next();
+        String secCurr = input2.next().toUpperCase();
+        
         input2.close();
 
         String userUrl = "https://www.oanda.com/currency-converter/en/?from=" + firstCurr + "&to=" + secCurr + "&amount=1";
