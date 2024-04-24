@@ -7,12 +7,14 @@ import org.jsoup.select.Elements;
 
 public class JavaExchanger {
     public static void main(String[] args) {
-        String url = "https://www.oanda.com/currency-converter/en/?from=USD&to=KRW&amount=1";
+        String url = "https://www.x-rates.com/table/?from=USD&amount=1";
 
 
         try {
             Document document = Jsoup.connect(url).get();
-            String exRate = document.select(".MuiInputBase-input.MuiFilledInput-input").text();
+            Element ratesTable = document.select(".ratesTable");
+
+            String EurRate = ratesTable.select("tr")[0].text();
 
         }catch(IOException e){
             e.printStackTrace();
