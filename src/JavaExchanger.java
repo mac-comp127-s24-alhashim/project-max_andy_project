@@ -14,7 +14,10 @@ public class JavaExchanger {
             Document document = Jsoup.connect(url).get();
             Element ratesTable = document.select(".ratesTable");
 
-            String EurRate = ratesTable.select("tr")[0].text();
+            for(Element rates : ratesTable) {
+                String rate = rates.select("tr")[0].text();
+                System.out.println(rate);
+            }
 
         }catch(IOException e){
             e.printStackTrace();
