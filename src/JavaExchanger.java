@@ -1,49 +1,37 @@
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+
 public class JavaExchanger {
     public static void main(String[] args) {
         String url = "https://www.x-rates.com/table/?from=USD&amount=1";
-
+        ArrayList<String> exRates = new ArrayList<String>();
 
         try {
             Document document = Jsoup.connect(url).get();
-            Element ratesTable = document.select(".ratesTable");
+            Elements ratesTable = document.select(".tablesorter.ratesTable tbody tr");
+            for(Element row : ratesTable) {
+                Elements cells = row.select("td");
+                StringBuilder rate = new StringBuilder();
+                for(Element cell : cells) {
+                    rate.append(cell.text()).append(" ");
+                }
+                exRates.add(rate.toString().trim());
+            }System.out.println(exRates);
 
-            for(Element rates : ratesTable) {
-                String rate = rates.select("tr")[0].text();
-                System.out.println(rate);
-            }
-
-        }catch(IOException e){
+        } catch(IOException e) {
             e.printStackTrace();
         }
 
+        for(String rate : exRates){
+            String[] exRatesSplit = rate.split(" ");
+            System.out.println(exRatesSplit[1]);
+        }
 
-
-
-        // try {
-        //     Document doc = Jsoup.connect("https://www.oanda.com/currency-converter/en/?from=USD&to=KRW&amount=1").get();
-
-        //     Elements divElements = doc.select("div.MuiInputBase-root.MuiFilledInput-root.MuiFilledInput-underline.MuiInputBase-fullWidth.MuiInputBase-formControl");
-
-        //     if (divElements.size() > 1) {
-        //         Element usdToKrwBox = divElements.get(1);
-        //         String usdToKrw = usdToKrwBox.text();
-
-        //         usdToKrw = usdToKrw.substring(272, usdToKrw.length() - 8);
-
-        //         System.out.println(usdToKrw);
-        //     } else {
-        //         System.out.println("Element not found");
-        //     }
-
-        // } catch (Exception e) {
-        //     e.printStackTrace();
-        // }
     }
 }
