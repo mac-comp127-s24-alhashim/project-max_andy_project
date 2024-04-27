@@ -10,4 +10,4 @@ We chose to do this project because it'd be interesting to implement the currenc
 
 Max will work on python, Andy will work on calculation, and we'll both work on java program and UI. (Subject to Change)
 
-Currencies: USD, EUR, CNY, KRW (Subject to change)
+Currencies: 47 currencies including USD, EUR, CNY, KRW
