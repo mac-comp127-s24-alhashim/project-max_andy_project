@@ -98,19 +98,34 @@ public class CurrencyExchanger {
     private static int CANVAS_HEIGHT = 800;
     private static int width = 200;
     private static int height = 400;
-    private CanvasWindow canvas1, canvas2;
-    GraphicsText textAmount, textFrom, textTo, textResult, textTitle, currencies, 
-    aud, cad, cny, eur, inr, jpy, mxn, rub, sgd, usd;
-    private Button button1;
-    TextField textField1, textField2, textField3, textField4;
-    Color beige = new Color(240, 240, 225);
+    private static CanvasWindow canvas1;
+    private static CanvasWindow canvas2;
+    static GraphicsText textAmount;
+    static GraphicsText textFrom;
+    static GraphicsText textTo;
+    static GraphicsText textResult;
+    static GraphicsText textTitle;
+    static GraphicsText currencies;
+    static GraphicsText aud;
+    static GraphicsText cad;
+    static GraphicsText cny;
+    static GraphicsText eur;
+    static GraphicsText inr;
+    static GraphicsText jpy;
+    static GraphicsText mxn;
+    static GraphicsText rub;
+    static GraphicsText sgd;
+    static GraphicsText usd;
+    private static Button button1;
+    static TextField textField1;
+    static TextField textField2;
+    static TextField textField3;
+    static TextField textField4;
+    static Color beige = new Color(240, 240, 225);
 
 
 
-    public CurrencyExchanger(){
-        run();
-    }
-    private void run(){
+    public static void main(String[] args) {
     canvas1 = new CanvasWindow("CURRENCY EXCHANGER", CANVAS_WIDTH, CANVAS_HEIGHT);
     canvas1.setBackground(beige);
     canvas1.draw();
@@ -175,6 +190,7 @@ public class CurrencyExchanger {
         canvas2.draw();
     });
     }
+    
 
     
 }
