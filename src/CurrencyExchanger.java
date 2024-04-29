@@ -126,69 +126,69 @@ public class CurrencyExchanger {
 
 
     public static void main(String[] args) {
-    canvas1 = new CanvasWindow("CURRENCY EXCHANGER", CANVAS_WIDTH, CANVAS_HEIGHT);
-    canvas1.setBackground(beige);
-    canvas1.draw();
-    textTitle = new GraphicsText("Currency Exchanger", 270,50);
-    textTitle.setFontSize(50);
-    canvas1.add(textTitle);
+        canvas1 = new CanvasWindow("CURRENCY EXCHANGER", CANVAS_WIDTH, CANVAS_HEIGHT);
+        canvas1.setBackground(beige);
+        canvas1.draw();
+        textTitle = new GraphicsText("Currency Exchanger", 270,50);
+        textTitle.setFontSize(50);
+        canvas1.add(textTitle);
 
-    
-    textAmount = new GraphicsText("Amount to convert", CANVAS_WIDTH*0.3, 390);
-    canvas1.add(textAmount);
-    textField1 = new TextField();
-    textField1.setPosition(CANVAS_WIDTH*0.3, 400);
-    canvas1.add(textField1);
-    
-    textFrom = new GraphicsText("Currency from (valid three-letter code)", CANVAS_WIDTH*0.6, 390);
-    canvas1.add(textFrom);
-    textField2 = new TextField();
-    textField2.setPosition(CANVAS_WIDTH*0.6, 400);
-    canvas1.add(textField2);
+        
+        textAmount = new GraphicsText("Amount to convert", CANVAS_WIDTH*0.3, 390);
+        canvas1.add(textAmount);
+        textField1 = new TextField();
+        textField1.setPosition(CANVAS_WIDTH*0.3, 400);
+        canvas1.add(textField1);
+        
+        textFrom = new GraphicsText("Currency from (valid three-letter code)", CANVAS_WIDTH*0.6, 390);
+        canvas1.add(textFrom);
+        textField2 = new TextField();
+        textField2.setPosition(CANVAS_WIDTH*0.6, 400);
+        canvas1.add(textField2);
 
-    textResult = new GraphicsText("Converted Amount", CANVAS_WIDTH*0.3, 490);
-    canvas1.add(textResult);
-    textField3 = new TextField();
-    textField3.setPosition(CANVAS_WIDTH*0.6, 500);
-    canvas1.add(textField3);
+        textResult = new GraphicsText("Converted Amount", CANVAS_WIDTH*0.3, 490);
+        canvas1.add(textResult);
+        textField3 = new TextField();
+        textField3.setPosition(CANVAS_WIDTH*0.6, 500);
+        canvas1.add(textField3);
 
-    textTo = new GraphicsText("Currency to (valid three-letter code)", CANVAS_WIDTH*0.6, 490);
-    canvas1.add(textTo);
-    textField4 = new TextField();
-    textField4.setPosition(CANVAS_WIDTH*0.3, 500);
-    canvas1.add(textField4);
+        textTo = new GraphicsText("Currency to (valid three-letter code)", CANVAS_WIDTH*0.6, 490);
+        canvas1.add(textTo);
+        textField4 = new TextField();
+        textField4.setPosition(CANVAS_WIDTH*0.3, 500);
+        canvas1.add(textField4);
 
-    button1 = new Button("Available Currencies");
-    button1.setPosition(450,750);
-    canvas1.add(button1);
+        button1 = new Button("Available Currencies");
+        button1.setPosition(450,750);
+        canvas1.add(button1);
 
 
-    button1.onClick(()-> {
-        canvas2 = new CanvasWindow("Available Currncies", width, height);
-        currencies = new GraphicsText ("Available Currencies", width * 0.1, 20);
-        aud = new GraphicsText("Australian Dollar AUD", width * 0.1, 60);
-        cad = new GraphicsText("Canadian Dollar CAD", width * 0.1, 80);
-        cny = new GraphicsText("Chinese Yuan CNY", width * 0.1, 100);
-        eur = new GraphicsText("Euro EUR", width * 0.1, 120);
-        inr = new GraphicsText("Indian Rupee INR", width * 0.1, 140);
-        jpy = new GraphicsText("Japanese Yen JPY", width * 0.1, 160);
-        mxn = new GraphicsText("Mexican Peso MXN", width * 0.1, 180);
-        rub = new GraphicsText("Russian Ruble RUB", width * 0.1, 200);
-        sgd = new GraphicsText("Singaporean Dollar SGD", width * 0.1, 220);
-        usd = new GraphicsText("United States Dollar USD", width * 0.1, 240);
-        canvas2.add(currencies);
-        canvas2.add(aud);
-        canvas2.add(cad);
-        canvas2.add(cny);
-        canvas2.add(eur);
-        canvas2.add(inr);
-        canvas2.add(jpy);
-        canvas2.add(mxn);
-        canvas2.add(rub);
-        canvas2.add(sgd);
-        canvas2.add(usd);
-        canvas2.draw();
-    });
+        button1.onClick(()-> {
+            canvas2 = new CanvasWindow("Available Currncies", width, height);
+            currencies = new GraphicsText ("Available Currencies", width * 0.1, 20);
+            aud = new GraphicsText("Australian Dollar AUD", width * 0.1, 60);
+            cad = new GraphicsText("Canadian Dollar CAD", width * 0.1, 80);
+            cny = new GraphicsText("Chinese Yuan CNY", width * 0.1, 100);
+            eur = new GraphicsText("Euro EUR", width * 0.1, 120);
+            inr = new GraphicsText("Indian Rupee INR", width * 0.1, 140);
+            jpy = new GraphicsText("Japanese Yen JPY", width * 0.1, 160);
+            mxn = new GraphicsText("Mexican Peso MXN", width * 0.1, 180);
+            rub = new GraphicsText("Russian Ruble RUB", width * 0.1, 200);
+            sgd = new GraphicsText("Singaporean Dollar SGD", width * 0.1, 220);
+            usd = new GraphicsText("United States Dollar USD", width * 0.1, 240);
+            canvas2.add(currencies);
+            canvas2.add(aud);
+            canvas2.add(cad);
+            canvas2.add(cny);
+            canvas2.add(eur);
+            canvas2.add(inr);
+            canvas2.add(jpy);
+            canvas2.add(mxn);
+            canvas2.add(rub);
+            canvas2.add(sgd);
+            canvas2.add(usd);
+            canvas2.draw();
+        });
     }
     
 

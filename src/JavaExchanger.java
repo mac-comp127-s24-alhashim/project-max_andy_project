@@ -73,7 +73,7 @@ public class JavaExchanger {
         }
 
         public static returnRate (double exchangeRate) {
-            return exchangeRate
+            return this.exchangeRate;
         }
         
 
