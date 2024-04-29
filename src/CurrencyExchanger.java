@@ -7,91 +7,6 @@ import edu.macalester.graphics.*;
 import edu.macalester.graphics.ui.Button;
 import edu.macalester.graphics.ui.TextField;
 
-// import java.awt.BorderLayout;
-// import java.awt.Color;
-// import java.awt.Dimension;
-// import java.awt.Font;
-// import java.awt.event.ActionEvent;
-// import java.awt.event.ActionListener;
-
-// public class CurrencyExchanger {
-
-//     JButton button;
-//     static JTextField textField;
-
-//     private static Color beige = new Color(240, 240, 225);
-    
-//     public static void main(String[] args) {
-//         JFrame frame = new JFrame("Currency Exchanger");
-//         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//         frame.setSize(900, 900);
-
-//         JLabel title = new JLabel("Currency Exchanger");
-//         title.setFont(new Font("Arial", Font.BOLD, 30));
-//         title.setHorizontalAlignment(JLabel.CENTER);
-//         frame.add(title);
-
-//         JTextField digitInput = new JTextField();
-//         digitInput.setPreferredSize(new Dimension(50, 50));
-//         digitInput.setFont(new Font("Arial", Font.PLAIN, 25));
-//         digitInput.setForeground(new Color(0x000000));
-//         // digitInput.setBackground(beige);
-//         digitInput.setCaretColor(Color.black);
-//         digitInput.setText("input amount of currency");
-
-//         JTextField firstcurrInput = new JTextField();
-//         firstcurrInput.setPreferredSize(new Dimension(50, 50));
-//         firstcurrInput.setFont(new Font("Arial", Font.PLAIN, 25));
-//         firstcurrInput.setForeground(new Color(0x000000));
-//         firstcurrInput.setCaretColor(Color.black);
-//         firstcurrInput.setText("input currency to exchange from in valid three-letter code");
-
-//         JTextField seccurrInput = new JTextField();
-//         seccurrInput.setPreferredSize(new Dimension(50, 50));
-//         seccurrInput.setFont(new Font("Arial", Font.PLAIN, 25));
-//         seccurrInput.setForeground(new Color(0x000000));
-//         seccurrInput.setCaretColor(Color.black);
-//         seccurrInput.setText("input currency to exchange to in valid three-letter code");
-
-//         JPanel digitPanel = new JPanel(new BorderLayout());
-//         digitPanel.setBackground(Color.WHITE);
-//         digitPanel.setBorder(BorderFactory.createEmptyBorder(300, 100, 300, 100));
-//         digitPanel.add(digitInput, BorderLayout.WEST);
-
-//         JPanel firstcurrPanel = new JPanel(new BorderLayout());
-//         firstcurrPanel.setBackground(Color.WHITE);
-//         firstcurrPanel.setBorder(BorderFactory.createEmptyBorder(300, 100, 300, 100));
-//         firstcurrPanel.add(firstcurrInput, BorderLayout.EAST);
-
-//         JPanel seccurrPanel = new JPanel(new BorderLayout());
-//         seccurrPanel.setBackground(Color.WHITE);
-//         seccurrPanel.setBorder(BorderFactory.createEmptyBorder(300, 100, 300, 100));
-//         seccurrPanel.add(seccurrInput, BorderLayout.EAST);
-
-//         JButton button = new JButton("Available Currencies");
-//         button.addActionListener((ActionListener) new ActionListener() {
-//             public void actionPerformed(ActionEvent e) {
-//             JFrame frame2 = new JFrame("Available Currencies");
-//             frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//             frame2.setSize(200, 400);
-//             frame2.setVisible(true);
-//             }
-//         });
-
-//         BorderLayout layout = new BorderLayout();
-//         frame.setLayout(layout);
-//         frame.add(title, BorderLayout.NORTH);
-//         frame.add(digitPanel, BorderLayout.WEST);
-//         frame.add(firstcurrPanel, BorderLayout.WEST);
-//         frame.add(seccurrPanel, BorderLayout.EAST);
-//         frame.add(button, BorderLayout.SOUTH);
-
-//         // frame.setBackground(beige);
-//         frame.setVisible(true);
-
-//     }
-// }
-
 
 public class CurrencyExchanger {
     private static int CANVAS_WIDTH = 1000;
@@ -117,6 +32,7 @@ public class CurrencyExchanger {
     static GraphicsText sgd;
     static GraphicsText usd;
     private static Button button1;
+    private static Button button2;
     static TextField textField1;
     static TextField textField2;
     static TextField textField3;
@@ -142,6 +58,7 @@ public class CurrencyExchanger {
         
         textFrom = new GraphicsText("Currency from (valid three-letter code)", CANVAS_WIDTH*0.6, 390);
         canvas1.add(textFrom);
+// 
         textField2 = new TextField();
         textField2.setPosition(CANVAS_WIDTH*0.6, 400);
         canvas1.add(textField2);
@@ -154,14 +71,21 @@ public class CurrencyExchanger {
 
         textTo = new GraphicsText("Currency to (valid three-letter code)", CANVAS_WIDTH*0.6, 490);
         canvas1.add(textTo);
+        
         textField4 = new TextField();
         textField4.setPosition(CANVAS_WIDTH*0.3, 500);
         canvas1.add(textField4);
 
         button1 = new Button("Available Currencies");
-        button1.setPosition(450,750);
+        button1.setPosition(425,750);
         canvas1.add(button1);
 
+        button2 = new Button("Exchange");
+        button2.setPosition(450, 600);
+        canvas1.add(button2);
+
+        
+        CurrencyTxt.CurrExRate(currFrom, currTo);
 
         button1.onClick(()-> {
             canvas2 = new CanvasWindow("Available Currncies", width, height);
