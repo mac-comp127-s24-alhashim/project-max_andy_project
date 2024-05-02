@@ -27,7 +27,10 @@ public class JavaExchanger {
     // Australian Dollar
     private static double aud;
 
-    public JavaExchanger() {
+    public static void main(String[] args) {
+        CurrencyExchanger.CurrencyExchange();
+    // }
+    // JavaExchanger() {
         String url = "https://www.x-rates.com/table/?from=USD&amount=1";
         ArrayList<String> exRates = new ArrayList<String>();
 
@@ -40,6 +43,7 @@ public class JavaExchanger {
                 exRates.add(exchangeRate);
             }
 
+            System.out.println(exRates);
             // United States Dollar
             usd = 1.0000;
             // Europe Euro
@@ -62,32 +66,35 @@ public class JavaExchanger {
             aud = Double.parseDouble(exRates.get(1));
             }
 
-            catch (IOException e) {e.printStackTrace();}
+            catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         
         public static Double returnRate(String currencyCode) {
             switch (currencyCode) {
-                case "USD":
+                case "usd":
                     return usd;
-                case "EUR":
+                case "eur":
                     return eur;
-                case "SGD":
+                case "sgd":
                     return sgd;
-                case "JPY":
+                case "jpy":
                     return jpy;
-                case "CNY":
+                case "cny":
                     return cny;
-                case "INR":
+                case "inr":
                     return inr;
-                case "MXN":
+                case "mxn":
                     return mxn;
-                case "CAD":
+                case "cad":
                     return cad;
-                case "RUB":
+                case "rub":
                     return rub;
-                case "AUD":
+                case "aud":
                     return aud;
                 default:
+                    System.out.println("ERROROROROROROROR");
                     return null;
             }
         }
