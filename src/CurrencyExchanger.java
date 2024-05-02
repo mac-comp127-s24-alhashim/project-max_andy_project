@@ -1,6 +1,4 @@
 import java.awt.Color;
-import java.awt.GradientPaint;
-import java.util.Scanner;
 
 import edu.macalester.graphics.*;
 import edu.macalester.graphics.ui.Button;
