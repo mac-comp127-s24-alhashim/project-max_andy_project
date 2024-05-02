@@ -7,26 +7,25 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class JavaExchanger {
-
-    public static double usd = 1.0000;
-            // Europe Euro
-    public static double eur;
-            // Singapore Dollar
-    public static double sgd;
-            // Japanese Yen
-    public static double jpy;
-            // Chinese Yuan Renminbi
-    public static double cny;
-            // Indian Rupee
-    public static double inr;
-            // Mexican Peso
-    public static double mxn;
-            // Canadian Dollar
-    public static double cad;
-            // Russian Ruble
-    public static double rub;
-            // Australian Dollar
-    public static double aud;
+    private static double usd = 1.0000;
+    // Europe Euro
+    private static double eur;
+    // Singapore Dollar
+    private static double sgd;
+    // Japanese Yen
+    private static double jpy;
+    // Chinese Yuan Renminbi
+    private static double cny;
+    // Indian Rupee
+    private static double inr;
+    // Mexican Peso
+    private static double mxn;
+    // Canadian Dollar
+    private static double cad;
+    // Russian Ruble
+    private static double rub;
+    // Australian Dollar
+    private static double aud;
 
     public JavaExchanger() {
         String url = "https://www.x-rates.com/table/?from=USD&amount=1";
@@ -40,8 +39,6 @@ public class JavaExchanger {
                 String exchangeRate = cells.get(0).text(); // Assuming exchange rate is in the second <td> element
                 exRates.add(exchangeRate);
             }
-            
-            // System.out.println(exRates);
 
             // United States Dollar
             usd = 1.0000;
@@ -63,19 +60,35 @@ public class JavaExchanger {
             rub = Double.parseDouble(exRates.get(38));
             // Australian Dollar
             aud = Double.parseDouble(exRates.get(1));
+            }
 
-
-
-        }
-
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        public static double returnRate(double exchangeRate) {
-            return this.exchangeRate;
+            catch (IOException e) {e.printStackTrace();}
         }
         
-
-    }
+        public static Double returnRate(String currencyCode) {
+            switch (currencyCode) {
+                case "USD":
+                    return usd;
+                case "EUR":
+                    return eur;
+                case "SGD":
+                    return sgd;
+                case "JPY":
+                    return jpy;
+                case "CNY":
+                    return cny;
+                case "INR":
+                    return inr;
+                case "MXN":
+                    return mxn;
+                case "CAD":
+                    return cad;
+                case "RUB":
+                    return rub;
+                case "AUD":
+                    return aud;
+                default:
+                    return null;
+            }
+        }
 }

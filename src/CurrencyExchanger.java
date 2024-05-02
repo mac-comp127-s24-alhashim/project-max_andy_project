@@ -49,7 +49,7 @@ public class CurrencyExchanger {
         textTitle = new GraphicsText("Currency Exchanger", 270,50);
         textTitle.setFontSize(50);
         canvas1.add(textTitle);
-        
+
         textAmount = new GraphicsText("Amount to convert", CANVAS_WIDTH*0.3, 390);
         canvas1.add(textAmount);
         textField1 = new TextField();
@@ -86,7 +86,7 @@ public class CurrencyExchanger {
         canvas1.add(button2);
 
         button2.onClick(()-> {
-            double finalCurr = Calculations.Calculations(currAmount, Double.parseDouble(currFrom), Double.parseDouble(currTo));
+            double finalCurr = Calculations.Calculate(currAmount, currFrom, currTo);
             GraphicsText finalCurrTxt = new GraphicsText(finalCurr+"", width, height);
             canvas1.add(finalCurrTxt);
         });
