@@ -4,7 +4,6 @@ import edu.macalester.graphics.*;
 import edu.macalester.graphics.ui.Button;
 import edu.macalester.graphics.ui.TextField;
 
-
 public class CurrencyExchanger {
     private static int CANVAS_WIDTH = 1000;
     private static int CANVAS_HEIGHT = 800;
@@ -85,7 +84,7 @@ public class CurrencyExchanger {
 
         button2.onClick(()-> {
             double finalCurr = Calculations.Calculate(currAmount, currFrom, currTo);
-            GraphicsText finalCurrTxt = new GraphicsText(finalCurr+"", width, height);
+            GraphicsText finalCurrTxt = new GraphicsText(finalCurr+"", CANVAS_WIDTH*0.6, 500);
             canvas1.add(finalCurrTxt);
         });
 
