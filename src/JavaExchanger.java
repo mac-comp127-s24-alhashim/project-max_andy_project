@@ -8,25 +8,25 @@ import org.jsoup.select.Elements;
 
 public class JavaExchanger {
 
-    public static double usdToUsd = 1.0000;
+    public static double usd = 1.0000;
             // Europe Euro
-    public static double usdToEur;
+    public static double eur;
             // Singapore Dollar
-    public static double usdToSgd;
+    public static double sgd;
             // Japanese Yen
-    public static double usdToJpy;
+    public static double jpy;
             // Chinese Yuan Renminbi
-    public static double usdToCny;
+    public static double cny;
             // Indian Rupee
-    public static double usdToInr;
+    public static double inr;
             // Mexican Peso
-    public static double usdToMxn;
+    public static double mxn;
             // Canadian Dollar
-    public static double usdToCad;
+    public static double cad;
             // Russian Ruble
-    public static double usdToRub;
+    public static double rub;
             // Australian Dollar
-    public static double usdToAud;
+    public static double aud;
 
     public JavaExchanger() {
         String url = "https://www.x-rates.com/table/?from=USD&amount=1";
@@ -44,25 +44,25 @@ public class JavaExchanger {
             // System.out.println(exRates);
 
             // United States Dollar
-            usdToUsd = 1.0000;
+            usd = 1.0000;
             // Europe Euro
-            usdToEur = Double.parseDouble(exRates.get(13));
+            eur = Double.parseDouble(exRates.get(13));
             // Singapore Dollar
-            usdToSgd = Double.parseDouble(exRates.get(40));
+            sgd = Double.parseDouble(exRates.get(40));
             // Japanese Yen
-            usdToJpy = Double.parseDouble(exRates.get(21));
+            jpy = Double.parseDouble(exRates.get(21));
             // Chinese Yuan Renminbi
-            usdToCny = Double.parseDouble(exRates.get(9));
+            cny = Double.parseDouble(exRates.get(9));
             // Indian Rupee
-            usdToInr = Double.parseDouble(exRates.get(17));
+            inr = Double.parseDouble(exRates.get(17));
             // Mexican Peso
-            usdToMxn = Double.parseDouble(exRates.get(28));
+            mxn = Double.parseDouble(exRates.get(28));
             // Canadian Dollar
-            usdToCad = Double.parseDouble(exRates.get(7));
+            cad = Double.parseDouble(exRates.get(7));
             // Russian Ruble
-            usdToRub = Double.parseDouble(exRates.get(38));
+            rub = Double.parseDouble(exRates.get(38));
             // Australian Dollar
-            usdToAud = Double.parseDouble(exRates.get(1));
+            aud = Double.parseDouble(exRates.get(1));
 
 
 
@@ -72,7 +72,7 @@ public class JavaExchanger {
             e.printStackTrace();
         }
 
-        public static returnRate (double exchangeRate) {
+        public static double returnRate(double exchangeRate) {
             return this.exchangeRate;
         }
         
