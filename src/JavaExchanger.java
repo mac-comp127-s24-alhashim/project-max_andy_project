@@ -29,8 +29,6 @@ public class JavaExchanger {
 
     public static void main(String[] args) {
         CurrencyExchanger.CurrencyExchange();
-    // }
-    // JavaExchanger() {
         String url = "https://www.x-rates.com/table/?from=USD&amount=1";
         ArrayList<String> exRates = new ArrayList<String>();
 
