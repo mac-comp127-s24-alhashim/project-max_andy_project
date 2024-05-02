@@ -7,3 +7,4 @@ Our program allows users to calculate currency exchange rates of their choice (f
 When the user inputs the starting currency and the ending currency, as well as the starting amount, they can press the "Exchange" button and the program will print the amount of money exchanged and the exchange rate for the two currencies mentioned.
 
 Our current list of currencies: USD, EUR, SGD, JPY, CNY, CAD, AUD, RUB, MXN, INR
+![image](https://github.com/mac-comp127-s24-alhashim/project-max_andy_project/assets/156822902/903bcafd-7f36-4ca4-b4a3-71249c6c3ca0)
