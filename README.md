@@ -12,3 +12,6 @@ Our current list of currencies: USD, EUR, SGD, JPY, CNY, CAD, AUD, RUB, MXN, INR
 
 This is the sketch for our project:
 ![image](https://github.com/mac-comp127-s24-alhashim/project-max_andy_project/assets/156822902/903bcafd-7f36-4ca4-b4a3-71249c6c3ca0)
+
+This is our UML Class Diagram:
+![image](https://github.com/mac-comp127-s24-alhashim/project-max_andy_project/assets/156822902/e8febca7-1c11-48c8-bd74-0c6d4df35f74)
