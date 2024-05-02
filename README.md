@@ -15,3 +15,6 @@ This is the sketch for our project:
 
 This is our UML Class Diagram:
 ![image](https://github.com/mac-comp127-s24-alhashim/project-max_andy_project/assets/156822902/e8febca7-1c11-48c8-bd74-0c6d4df35f74)
+
+Demo video:
+https://drive.google.com/file/d/1EQMTMr7pNzO50J3Miy0K_G8t0OFg_c8M/view?usp=sharing
